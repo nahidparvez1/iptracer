@@ -1,0 +1,38 @@
+<!-- Joratali Solution by Implementing json on client side STARTS  -->
+
+<!-- <html>
+<head>
+    <script>
+        var date = new Date();
+        var timezone = date.toString().match(/\(([^)]+)\)/)[1];
+        var country = timezone.split(' ')[0];
+    </script>
+</head>
+<body>
+    <h1>Country: <script>document.write(country)</script></h1>
+</body>
+</html>
+
+ -->
+
+
+<!-- Joratali Solution by Implementing json on client side ENDS  -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $.getJSON("https://ipwhois.io/json", function(data) {
+        $("#country_code").text(data.country_code);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Your Country Code:</h1>
+  <p id="country_code"></p>
+</body>
+</html>
