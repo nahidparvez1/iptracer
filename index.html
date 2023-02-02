@@ -25,18 +25,19 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function() {
-      $.getJSON("http://ipwho.is/json", { fields: "country_code" }, function(data) {
+      $.getJSON("https://api.ipdata.co?api-key=test", function(data) {
         $("#country_code").text(data.country_code);
       });
     });
   </script>
 </head>
 <body>
-  <h1>Test 04</h1>
+  <h1>Test 05</h1>
   <h1>Your Country Code:</h1>
   <p id="country_code"></p>
 </body>
 </html>
+
 
 
 
